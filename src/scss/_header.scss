@@ -1,0 +1,323 @@
+.header-container {
+  align-items: center;
+  background-color: $COLOR_BG-LIGHT-BLUE;
+  display: flex;
+  height: 96px;
+  justify-content: center;
+  transition: 1s;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  letter-spacing: 0.1em;
+  max-width: 1620px;
+  padding: 0 10px;
+  a {
+    text-decoration: none;
+  }
+  &__brif {
+    align-items: center;
+    color: $COLOR_WHITE;
+    background-color: $COLOR_BLUE;
+    border: none;
+    border-radius: 6px;
+    display: none;
+    font: fn-font(18px, 22px, 500);
+    flex: 0 0 auto;
+    height: 46px;
+    justify-content: center;
+    margin: 43px 0 46px;
+    width: 270px;
+  }
+  &__text-over-mail {
+    display: none;
+  }
+}
+
+.nav-container {
+  align-items: center;
+  display: flex;
+  gap: 23px;
+  height: 100%;
+  justify-content: space-between;
+  transition: 0.5s;
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.logo {
+  background: url(../images/logo.svg) center/cover no-repeat;
+  display: block;
+  height: 32px;
+  margin-right: 25px;
+  width: 154px;
+}
+
+.menu {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  width: 630px;
+  &__item {
+    align-items: center;
+    color: $COLOR_BLACK;
+    display: flex;
+    font: fn-font(14px, 17px);
+    justify-content: center;
+    letter-spacing: 0.11em;
+    opacity: 0.7;
+    position: relative;
+    &::before {
+      background-color: $COLOR_BLACK;
+      content: "";
+      display: none;
+      height: 24px;
+      left: 0;
+      mask-size: contain;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      position: absolute;
+      width: 24px;
+    }
+    &_home::before {
+      mask-image: url(../images/icons/home_icon.svg);
+    }
+    &_projects::before {
+      mask-image: url(../images/icons/progects_icon.svg);
+    }
+    &_uslugi::before {
+      mask-image: url(../images/icons/uslugi_icon.svg);
+    }
+    &_about-company::before {
+      mask-image: url(../images/icons/about-company.svg);
+    }
+    &_made-solution::before {
+      mask-image: url(../images/icons/made-solutions_icon.svg);
+    }
+    &_contacts::before {
+      mask-image: url(../images/icons/contacts_icon.svg);
+    }
+    &.active {
+      color: $COLOR_BLUE;
+      font-weight: 600;
+      opacity: 1;
+      &::before {
+        background-color: $COLOR_BLUE;
+      }
+      &::after {
+        background-color: $COLOR_BLUE;
+        bottom: 0px;
+        border-radius: 6px;
+        content: "";
+        height: 4px;
+        position: absolute;
+        width: 48px;
+      }
+    }
+  }
+}
+
+.mail {
+  color: $COLOR_BLACK;
+  font: fn-font(13px, 16px, 600);
+  flex: 0 0 auto;
+  padding-left: 33px;
+  position: relative;
+  &::before {
+    background: url(../images/icons/mail_icon.svg) center/cover no-repeat;
+    content: "";
+    display: inline-block;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    width: 23px;
+  }
+}
+
+.phone {
+  color: $COLOR_BLACK;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  font: fn-font(13px, 16px, 600);
+  justify-content: space-between;
+  padding-left: 33px;
+  position: relative;
+  &::before {
+    content: url(../images/icons/phone_icon.svg);
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 20px;
+  }
+  &__text {
+    color: $COLOR_BLUE;
+    font: fn-font(10px, 10px);
+    pointer-events: none;
+  }
+  &__number {
+    font: fn-font(13px, 16px, 600);
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 1024px) {
+  .menu {
+    width: 500px;
+    &__item {
+      letter-spacing: normal;
+    }
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 600px) {
+  .header-container {
+    height: 100px;
+  }
+  .header {
+    justify-content: space-between;
+    padding: 0 34px;
+    width: 100%;
+    &__brif {
+      display: flex;
+    }
+    &__text-over-mail {
+      display: block;
+      font: fn-font(24px, 29px, 500);
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+  }
+
+  .nav-container {
+    align-items: flex-start;
+    background-color: $COLOR_BG-LIGHT-BLUE;
+    flex-direction: column;
+    gap: unset;
+    justify-content: unset;
+    left: 0;
+    min-height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+    padding: 0 34px;
+    position: absolute;
+    overflow: auto;
+    top: 99px;
+    width: 100%;
+    z-index: 10;
+  }
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    &__item {
+      border-bottom: 1px solid rgba(43, 45, 58, 0.1);
+      font: fn-font(20px, 24px, 500);
+      height: 88px;
+      justify-content: flex-start;
+      letter-spacing: 0.1em;
+      padding-left: 49px;
+      position: relative;
+      &::before {
+        display: block;
+      }
+      &.active {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .mail {
+    font: fn-font(20px, 24px, 500);
+    letter-spacing: 1px;
+    margin-bottom: 200px;
+    padding-left: 45px;
+    &::before {
+      height: 22px;
+      width: 28px;
+    }
+  }
+  .phone {
+    display: none;
+  }
+}
+
+@media (max-width: 599px) {
+  .header-container {
+    height: 61px;
+  }
+  .header {
+    justify-content: space-between;
+    padding: 0 18px;
+    width: 100%;
+    &__brif {
+      display: flex;
+      margin: 32px 0;
+      width: 100%;
+    }
+    &__text-over-mail {
+      display: none;
+    }
+  }
+
+  .nav-container {
+    align-items: flex-start;
+    background-color: #ebeef5;
+    flex-direction: column;
+    gap: unset;
+    justify-content: unset;
+    left: 0;
+    min-height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+    padding: 0 18px;
+    position: absolute;
+    overflow: auto;
+    top: 55px;
+    width: 100%;
+    z-index: 10;
+  }
+  .menu {
+    flex-direction: column;
+    flex: 0;
+    justify-content: flex-start;
+    width: 100%;
+    &__item {
+      border-bottom: 1px solid rgba(43, 45, 58, 0.1);
+      font-weight: 500;
+      font-size: 14px;
+      height: 56px;
+      justify-content: flex-start;
+      letter-spacing: 0.01em;
+      line-height: 17px;
+      letter-spacing: 0.1em;
+      padding-left: 49px;
+      position: relative;
+      &::before {
+        display: block;
+      }
+      &.active {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .mail {
+    display: none;
+    &::before {
+      height: 22px;
+      width: 28px;
+    }
+  }
+  .phone {
+    display: none;
+  }
+}

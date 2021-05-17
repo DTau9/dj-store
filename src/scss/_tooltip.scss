@@ -1,0 +1,109 @@
+.tooltip {
+  background: url(../images/icons/tooltip.svg) center/cover no-repeat;
+  cursor: pointer;
+  height: 60px;
+  position: absolute;
+  width: 60px;
+  &__content {
+    background: $COLOR_WHITE;
+    border-radius: 10px;
+    left: -146px;
+    max-height: 180px;
+    opacity: 0;
+    padding: 14px 24px 6px;
+    pointer-events: none;
+    position: absolute;
+    top: -173px;
+    transition: 0.3s;
+    width: 352px;
+    z-index: 1;
+    &::after {
+      background-color: $COLOR_WHITE;
+      border-radius: 2px;
+      bottom: -7px;
+      content: "";
+      height: 20px;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%) scaleX(0.9) rotate(45deg);
+      width: 20px;
+    }
+  }
+  &__title {
+    font: fn-font(18px, 24px, 500);
+    letter-spacing: 0.1em;
+    margin: 0 0 8px;
+    padding-right: 85px;
+  }
+  &__character {
+    font: fn-font(12px, 17px);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    & li {
+      background: url(../images/icons/ellipse.svg) left center no-repeat;
+      margin-bottom: 9px;
+      padding-left: 24px;
+    }
+  }
+  &__equlaizer {
+    background: url(../images/icons/equlaizer_icon.svg) center/cover no-repeat;
+    box-shadow: 4px 6px 12px rgba(57, 125, 255, 0.12);
+    border-radius: 8px;
+    height: 45px;
+    position: absolute;
+    right: 43px;
+    top: 16px;
+    width: 46px;
+  }
+  &__cross-close {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    top: 3px;
+    position: absolute;
+    right: 14px;
+  }
+  &.active {
+    & .tooltip__content {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .tooltip {
+    &__content {
+      height: 204px;
+      left: -147px;
+      max-height: none;
+      padding: 16px;
+      top: -205px;
+      width: 288px;
+      &::after {
+        left: 58%;
+      }
+    }
+    &__title {
+      letter-spacing: 0.6px;
+      line-height: 22px;
+      margin-bottom: 10px;
+    }
+    &__equlaizer {
+      height: 41px;
+      width: 41px;
+    }
+    &__cross-close {
+      top: 9px;
+    }
+    &__character {
+      & li {
+        letter-spacing: 0.7px;
+        margin-bottom: 11px;
+      }
+    }
+  }
+}

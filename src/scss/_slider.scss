@@ -1,0 +1,262 @@
+.my-slider-container {
+  color: $COLOR_WHITE;
+  height: 624px;
+  letter-spacing: 0.1em;
+  margin-bottom: 120px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.my-slider {
+  height: 100%;
+  &__slide {
+    background-color: #a9b3ca;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100% !important;
+  }
+  &__slide_1 {
+    background-image: url(../images/conference1_desktop.jpg);
+  }
+  &__slide_2 {
+    background-image: url(../images/conference2_desktop.jpg);
+  }
+  &__about-block {
+    margin-left: 19.8%;
+    margin-top: 123px;
+    max-width: 611px;
+  }
+  &__over-title {
+    font: fn-font(18px, 22px, 500);
+    margin-bottom: 11px;
+  }
+  &__title {
+    font: fn-font(52px, 63px, 600);
+    letter-spacing: 3px;
+    margin: 0 0 24px;
+  }
+  &__description {
+    font: fn-font(16px, 24px, 500);
+    margin: 0 0 53px;
+    opacity: 0.8;
+  }
+  &__feedback {
+    align-items: center;
+    color: $COLOR_WHITE;
+    border: 1px solid $COLOR_WHITE;
+    border-radius: 8px;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    font: fn-font(16px, 20px, 500);
+    letter-spacing: 0.1em;
+    margin-right: 17px;
+    text-decoration: none;
+    width: 186px;
+    &_brif {
+      background-color: $COLOR_BLUE;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.my-thumbs-slider-container {
+  position: absolute;
+  right: -2.9%;
+  top: 31.2%;
+  width: 600px;
+}
+
+.my-thumbs-slider {
+  padding-bottom: 69px;
+  z-index: 2;
+  &__slide {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    flex: 0 0 auto;
+    height: 205px;
+    opacity: 0.3;
+    padding: 2px 34px;
+    width: 359px !important;
+  }
+  &__number {
+    color: $COLOR_BLUE;
+    font: fn-font(64px, 72px, bold);
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
+  }
+  &__content {
+    color: rgba(255, 255, 255, 0.7);
+    font: fn-font(14px, 22px);
+    margin: 0;
+  }
+}
+
+.swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.navigation-container {
+  bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  left: 34px;
+  position: absolute;
+  width: 106px;
+}
+
+.swiper-btn {
+  align-items: center;
+  background-color: $COLOR_BLUE;
+  border-radius: 50%;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  position: relative;
+  width: 32px;
+  &:focus {
+    outline: none;
+  }
+  &::before {
+    border-left: 1px solid $COLOR_WHITE;
+    border-top: 1px solid $COLOR_WHITE;
+    content: "";
+    height: 10px;
+    position: absolute;
+    width: 10px;
+  }
+  &_prev::before {
+    transform: translateX(3px) rotate(-45deg);
+  }
+  &_next::before {
+    transform: translateX(-3px) rotate(135deg);
+  }
+  &_disabled {
+    background-color: rgba(186, 209, 255, 0.1);
+    &.swiper-btn::before {
+      opacity: 0.2;
+    }
+  }
+}
+
+@media (max-width: 1536px) and (min-width: 1367px) {
+  .my-slider__about-block {
+    margin-left: 12%;
+  }
+}
+
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .my-slider-container {
+    letter-spacing: 0.4px;
+  }
+  .my-thumbs-slider-container {
+    right: -14.4%;
+    top: 38.2%;
+  }
+  .my-thumbs-slider {
+    &__content {
+      line-height: 20px;
+    }
+    &__slide {
+      padding: 2px 18px;
+      width: 309px !important;
+    }
+    &__number {
+      font-size: 44px;
+    }
+  }
+  .my-slider {
+    &__about-block {
+      margin-left: 4%;
+      max-width: 530px;
+    }
+    &__title {
+      font-size: 42px;
+    }
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 600px) {
+  .my-thumbs-slider-container {
+    display: none;
+  }
+  .my-slider-container {
+    height: 410px;
+    margin-bottom: 68px;
+  }
+
+  .my-slider {
+    &__slide_1 {
+      background-image: url(../images/conference1_tablet.jpg);
+    }
+    &__slide_2 {
+      background-image: url(../images/conference2_tablet.jpg);
+    }
+    &__about-block {
+      margin-left: 4.6%;
+      margin-top: 71px;
+      max-width: 570px;
+    }
+    &__over-title {
+      font: fn-font(14px, 17px);
+      letter-spacing: 1px;
+    }
+    &__title {
+      font-size: 47px;
+      margin-bottom: 18px;
+    }
+    &__description {
+      font: fn-font(14px, 21px);
+      margin-bottom: 43px;
+    }
+    &__feedback {
+      height: 46px;
+      width: 165px;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .my-thumbs-slider-container {
+    display: none;
+  }
+  .my-slider-container {
+    height: 286px;
+    margin-bottom: 42px;
+  }
+  .my-slider {
+    &__slide_1 {
+      background-image: url(../images/conference1_mobile.jpg);
+    }
+    &__slide_2 {
+      background-image: url(../images/conference2_mobile.jpg);
+    }
+    &__about-block {
+      letter-spacing: 1px;
+      margin: 25px 0 0;
+      padding: 0 16px;
+    }
+    &__over-title {
+      font: fn-font(12px, 14px);
+      margin-bottom: 16px;
+    }
+    &__title {
+      font: fn-font(24px, 24px);
+      letter-spacing: 1.3px;
+      margin-bottom: 13px;
+    }
+    &__description {
+      font: fn-font(12px, 18px);
+      margin-bottom: 43px;
+    }
+    &__feedback {
+      font-size: 12px;
+      height: 33px;
+      width: 125px;
+      &_brif {
+        margin-right: 0;
+      }
+    }
+  }
+}

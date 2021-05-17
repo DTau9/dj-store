@@ -1,0 +1,10 @@
+// color
+$COLOR_BLACK: #2b2d3a;
+$COLOR_WHITE: #fff;
+$COLOR_BLUE: #397dff;
+$COLOR_BG-LIGHT-BLUE: #ebeef5;
+
+// function
+@function fn-font($fz, $lh, $fw: normal) {
+  @return ($fw $fz) / $lh "Montserrat", sans-serif;
+}

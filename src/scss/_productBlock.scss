@@ -1,0 +1,68 @@
+.product-block {
+  display: flex;
+  height: 620px;
+  margin-bottom: 230px;
+  &__item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 50%;
+  }
+  &__item_product {
+    background-image: url(../images/speaker_desktop.jpg);
+    background-position: center;
+  }
+  &__item_demo {
+    background-image: url(../images/cabinet_desktop.jpg);
+    background-position: left top;
+  }
+  &__tooltip {
+    left: 185px;
+    top: 66px;
+  }
+}
+
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .product-block {
+    height: 520px;
+    &__tooltip {
+      left: 150px;
+      top: 57px;
+    }
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 600px) {
+  .product-block {
+    height: 400px;
+    &__item_product {
+      background-image: url(../images/speaker_tablet.jpg);
+    }
+    &__item_demo {
+      background-image: url(../images/cabinet_tablet.jpg);
+    }
+    &__tooltip {
+      left: 46px;
+      top: 30px;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .product-block {
+    height: 200px;
+    &__item_product {
+      background-image: url(../images/speaker_mobile.jpg);
+      background-position: bottom;
+    }
+    &__item_demo {
+      background-image: url(../images/cabinet_mobile.jpg);
+    }
+    &__tooltip {
+      height: 40px;
+      left: 14px;
+      top: 12px;
+      width: 40px;
+    }
+  }
+}

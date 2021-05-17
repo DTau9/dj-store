@@ -1,0 +1,32 @@
+.hamburger {
+  display: none;
+  &:hover {
+    cursor: pointer;
+  }
+  & .line {
+    background-color: $COLOR_BLACK;
+    display: block;
+    height: 2px;
+    margin: 4px auto;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    width: 20px;
+  }
+  &.active {
+    & .line:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+    & .line:nth-child(2) {
+      opacity: 0;
+    }
+    & .line:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .hamburger {
+    display: block;
+  }
+}

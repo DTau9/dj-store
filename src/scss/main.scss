@@ -1,0 +1,32 @@
+html {
+  color: #2b2d3a;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@import "vars";
+@import "header";
+@import "humburger";
+@import "slider";
+@import "tooltip";
+@import "productBlock";
+@import "popUp";
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  transition: 1s;
+  z-index: 10;
+}
