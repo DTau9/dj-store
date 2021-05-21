@@ -41,6 +41,10 @@
     font: fn-font(16px, 26px);
     margin-bottom: 25px;
   }
+  &__phone-container {
+    margin: 0 0 24px;
+    width: 100%;
+  }
   &__input {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 9px;
@@ -48,7 +52,6 @@
     height: 48px;
     margin-bottom: 24px;
     padding-left: 15px;
-    top: 124px;
     width: 454px;
     &::placeholder {
       color: $COLOR_BLACK;
@@ -61,7 +64,7 @@
     align-items: center;
     display: flex;
     font: fn-font(14px, 17px);
-    margin: 7px 0 14px;
+    margin: 7px 0 24px;
     & input {
       display: none;
       &:checked ~ .pop-up__checkbox::before {
@@ -94,14 +97,18 @@
     margin-left: 4px;
     text-decoration: none;
   }
-  &__btn {
+  &__btn-submit {
     border-radius: 8px;
     background-color: $COLOR_BLUE;
     border: none;
     color: $COLOR_WHITE;
     font: fn-font(18px, 22px, 600);
     height: 52px;
+    opacity: 0.5;
     width: 453px;
+    &.active {
+      opacity: 1;
+    }
   }
   &.active {
     opacity: 1;
@@ -110,6 +117,21 @@
       transform: scale(1);
     }
   }
+  &__message {
+    font: fn-font(12px, 12px);
+    margin: -24px 0 10px;
+    text-align: right;
+    &_error {
+      color: red;
+    }
+    &_valid {
+      color: green;
+    }
+  }
+}
+
+.display-none {
+  display: none;
 }
 
 @media (max-width: 599px) {
@@ -133,6 +155,9 @@
       font: fn-font(12px, 19px);
       margin-bottom: 3px;
     }
+    &__phone-container {
+      margin: 0 0 16px;
+    }
     &__input {
       font: fn-font(14px, 16px);
       height: 42px;
@@ -152,7 +177,10 @@
       font: fn-font(8px, 0px);
       margin-left: 24px;
     }
-    &__btn {
+    &__message {
+      margin: -15px 0 3px;
+    }
+    &__btn-submit {
       font: fn-font(16px, 20px);
       height: 46px;
       width: 100%;

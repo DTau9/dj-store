@@ -13,7 +13,8 @@ const plugins = [
   new MiniCssExtractPlugin(),
   new HtmlWebpackPlugin({
     template: path.resolve(__dirname, './src/template.html'),
-    filename: 'index.html'
+    filename: 'index.html',
+    inject: 'body'
   }),
 ];
 

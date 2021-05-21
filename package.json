@@ -2,7 +2,9 @@
   "name": "dj-store",
   "version": "1.0.0",
   "private": "true",
-  "dependencies": {},
+  "dependencies": {
+    "swiper": "^6.6.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.13.16",
     "@babel/preset-env": "^7.13.15",
