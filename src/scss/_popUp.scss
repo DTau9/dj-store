@@ -53,6 +53,9 @@
     margin-bottom: 24px;
     padding-left: 15px;
     width: 454px;
+    &:focus-visible {
+      outline: none;
+    }
     &::placeholder {
       color: $COLOR_BLACK;
       opacity: 0.5;
