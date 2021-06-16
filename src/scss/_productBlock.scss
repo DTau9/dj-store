@@ -10,7 +10,7 @@
   }
   &__item_product {
     background-image: url(../images/speaker_desktop.jpg);
-    background-position: center;
+    background-position: bottom center;
   }
   &__item_demo {
     background-image: url(../images/cabinet_desktop.jpg);
@@ -22,7 +22,7 @@
   }
 }
 
-@media (max-width: 1366px) and (min-width: 1024px) {
+@media (max-width: 1366px) and (min-width: 1023px) {
   .product-block {
     height: 520px;
     &__tooltip {
@@ -32,7 +32,7 @@
   }
 }
 
-@media (max-width: 1023px) and (min-width: 600px) {
+@media (max-width: 1024px) and (min-width: 600px) {
   .product-block {
     height: 400px;
     &__item_product {

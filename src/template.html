@@ -5,16 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>dj-store</title>
+  <title>Dj-store</title>
 </head>
 
 <body>
   <div class="header-container">
     <header class="header">
-      <a class="logo" href="#"></a>
+      <a class="logo header__logo" href="#"></a>
       <div class="nav-container" id="navContainer">
         <nav class="menu">
-          <a class="menu__item menu__item_home active" href="#">Главная</a>
+          <a class="menu__item menu__item_home menu__item_active" href="#">Главная</a>
           <a class="menu__item menu__item_projects" href="#">Проекты</a>
           <a class="menu__item menu__item_uslugi" href="#">Услуги</a>
           <a class="menu__item menu__item_about-company" href="#">О компании</a>
@@ -23,7 +23,7 @@
         </nav>
         <button class="header__brif">Заполнить бриф</button>
         <div class="header__text-over-mail">Напишите нам</div>
-        <a class="mail" href="mailto:info@sld-store.ru">info@sld-store.ru</a>
+        <a class="mail header__mail" href="mailto:info@sld-store.ru">info@sld-store.ru</a>
         <a class="phone" id="orderСallback" href="#">
           <span class="phone__text">Обратный звонок</span>
           <span class="phone__number">8 812 615-62-79</span>
@@ -39,7 +39,7 @@
 
   <!-- swiper -->
 
-  <div class="my-slider-container">
+  <div class="my-slider-container page__slider">
 
     <div class="swiper-container my-slider">
       <div class="swiper-wrapper">
@@ -150,7 +150,7 @@
           <div class="tooltip__equlaizer"></div>
           <div class="tooltip__cross-close">&#x2715;</div>
           <h3 class="tooltip__title">Микшерный пульт Yamaha MG10</h3>
-          <ul class="tooltip__character">
+          <ul class="tooltip__parameters">
             <li>Простой интерфейс.</li>
             <li>Максимальная производительность.</li>
             <li>10 каналов.</li>
@@ -168,7 +168,6 @@
       <div class="pop-up__text">Заполните форму ниже и мы свяжемся с вами</div>
 
       <form action="post" id="formCallback" method="POST">
-
         <input class="pop-up__input" type="text" name="name" id="name" placeholder="Имя*" required>
         <div id="valid-msg-name" class="pop-up__message pop-up__message_valid display-none">✓ Валидный</div>
         <div id="error-msg-name" class="pop-up__message pop-up__message_error display-none">Только буквы</div>
@@ -189,7 +188,6 @@
 
     </div>
   </div>
-  <!-- <script defer src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
 </body>
 
 </html>

@@ -14,8 +14,8 @@
   letter-spacing: 0.1em;
   max-width: 1620px;
   padding: 0 10px;
-  a {
-    text-decoration: none;
+  &__logo {
+    margin-right: 25px;
   }
   &__brif {
     align-items: center;
@@ -33,6 +33,9 @@
   }
   &__text-over-mail {
     display: none;
+  }
+  &__mail {
+    margin-bottom: 200px;
   }
 }
 
@@ -53,7 +56,6 @@
   background: url(../images/logo.svg) center/cover no-repeat;
   display: block;
   height: 32px;
-  margin-right: 25px;
   width: 154px;
 }
 
@@ -71,6 +73,11 @@
     letter-spacing: 0.11em;
     opacity: 0.7;
     position: relative;
+    text-decoration: none;
+    &:hover {
+      color: $COLOR_BLUE;
+      opacity: 1;
+    }
     &::before {
       background-color: $COLOR_BLACK;
       content: "";
@@ -101,7 +108,7 @@
     &_contacts::before {
       mask-image: url(../images/icons/contacts_icon.svg);
     }
-    &.active {
+    &_active {
       color: $COLOR_BLUE;
       font-weight: 600;
       opacity: 1;
@@ -147,6 +154,7 @@
   justify-content: space-between;
   padding-left: 33px;
   position: relative;
+  text-decoration: none;
   &::before {
     content: url(../images/icons/phone_icon.svg);
     display: inline-block;
@@ -225,7 +233,7 @@
       &::before {
         display: block;
       }
-      &.active {
+      &_active {
         &::after {
           display: none;
         }
@@ -236,7 +244,6 @@
   .mail {
     font: fn-font(20px, 24px, 500);
     letter-spacing: 1px;
-    margin-bottom: 200px;
     padding-left: 45px;
     &::before {
       height: 22px;
@@ -302,7 +309,7 @@
       &::before {
         display: block;
       }
-      &.active {
+      &_active {
         &::after {
           display: none;
         }

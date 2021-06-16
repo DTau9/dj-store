@@ -7,13 +7,12 @@
   &__content {
     background: $COLOR_WHITE;
     border-radius: 10px;
+    bottom: 55px;
     left: -146px;
-    max-height: 180px;
     opacity: 0;
     padding: 14px 24px 6px;
     pointer-events: none;
     position: absolute;
-    top: -173px;
     transition: 0.3s;
     width: 352px;
     z-index: 1;
@@ -35,7 +34,7 @@
     margin: 0 0 8px;
     padding-right: 85px;
   }
-  &__character {
+  &__parameters {
     font: fn-font(12px, 17px);
     list-style-type: none;
     margin: 0;
@@ -77,11 +76,9 @@
 @media (max-width: 599px) {
   .tooltip {
     &__content {
-      height: 204px;
+      bottom: 40px;
       left: -147px;
-      max-height: none;
       padding: 16px;
-      top: -205px;
       width: 288px;
       &::after {
         left: 58%;
@@ -99,7 +96,7 @@
     &__cross-close {
       top: 9px;
     }
-    &__character {
+    &__parameters {
       & li {
         letter-spacing: 0.7px;
         margin-bottom: 11px;
