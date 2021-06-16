@@ -1,11 +1,16 @@
 html {
   color: #2b2d3a;
   font-family: "Montserrat", sans-serif;
+  scrollbar-width: thin;
 }
 
 body {
   margin: 0;
   overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }
 
 * {

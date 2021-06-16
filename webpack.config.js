@@ -73,7 +73,7 @@ module.exports = {
                 plugins: [
                   ["mozjpeg", {
                     progressive: true,
-                    quality: 100
+                    quality: 70
                   }]
                 ],
               },
